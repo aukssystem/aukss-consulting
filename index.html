@@ -5,33 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>aukss consulting</title>
 
-  <!-- Typeface (neutral Scandinavian feel) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg: #f4f3f1;          /* warm light gray */
-      --paper: #ffffff;       /* page surface */
-      --text: #141414;        /* near-black */
-      --muted: #5a5a5a;       /* secondary text */
+      --bg: #f4f3f1;
+      --paper: #ffffff;
+      --text: #141414;
+      --muted: #5a5a5a;
       --line: rgba(20,20,20,.10);
-      --soft: rgba(20,20,20,.06);
       --radius: 18px;
       --max: 980px;
     }
 
     * { box-sizing: border-box; }
-
     html, body { height: 100%; }
 
     body{
       margin: 0;
       font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
       color: var(--text);
-      background:
-        radial-gradient(900px 500px at 15% 0%, #ffffff 0%, var(--bg) 55%, var(--bg) 100%);
+      background: radial-gradient(900px 500px at 15% 0%, #ffffff 0%, var(--bg) 55%, var(--bg) 100%);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -63,14 +59,6 @@
       margin-bottom: 28px;
     }
 
-    .title{
-      display:flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
     h1{
       margin: 0;
       font-size: 34px;
@@ -78,24 +66,13 @@
       letter-spacing: -0.02em;
     }
 
-    .tag{
-      font-size: 13px;
-      color: var(--muted);
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.5);
-      padding: 8px 12px;
-      border-radius: 999px;
-      white-space: nowrap;
-    }
-
     .lead{
       margin: 16px 0 0;
-      color: var(--text);
       max-width: 72ch;
       font-size: 16px;
     }
-
     .lead + .lead { margin-top: 10px; }
+    .muted{ color: var(--muted); }
 
     .grid{
       display: grid;
@@ -160,10 +137,10 @@
 
     .card p{
       margin: 10px 0 0;
-      max-width: none;
       color: var(--muted);
       font-size: 14px;
       line-height: 1.65;
+      max-width: none;
     }
 
     .card .big{
@@ -183,6 +160,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
       padding: 10px 12px;
       border-radius: 12px;
       border: 1px solid var(--line);
@@ -190,6 +168,7 @@
       text-decoration: none;
       font-size: 14px;
       color: var(--text);
+      white-space: nowrap;
     }
 
     .btn:hover{
@@ -197,7 +176,11 @@
       opacity: 1;
     }
 
-    .muted{ color: var(--muted); }
+    .liIcon{
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+    }
 
     footer{
       margin-top: 22px;
@@ -223,10 +206,7 @@
     <div class="paper">
 
       <header>
-        <div class="title">
-          <h1>aukss consulting</h1>
-          <div class="tag">ribotas formatas</div>
-        </div>
+        <h1>aukss consulting</h1>
 
         <p class="lead">
           Padedame susiorientuoti pokyčių situacijose, kai reikia aiškumo, ramios išorinės perspektyvos ir realistiškų sprendimų.
@@ -237,7 +217,6 @@
       </header>
 
       <div class="grid">
-        <!-- MAIN -->
         <div>
           <section>
             <h2>Kada tai naudinga</h2>
@@ -277,15 +256,9 @@
 
           <section>
             <h2>Kaip dirbame</h2>
-            <p>
-              Į kiekvieną situaciją žiūrime individualiai, iš dviejų perspektyvų.
-            </p>
-            <p>
-              Kasdienė veikla – procesų aiškumas, atsakomybės, koordinacija ir realus veikimas „čia ir dabar“.
-            </p>
-            <p>
-              Žmonės ir darbo santykiai – darbo teisė, HR praktikos, pasitikėjimas, komunikacija ir pokyčių priėmimas.
-            </p>
+            <p>Į kiekvieną situaciją žiūrime individualiai, iš dviejų perspektyvų.</p>
+            <p>Kasdienė veikla – procesų aiškumas, atsakomybės, koordinacija ir realus veikimas „čia ir dabar“.</p>
+            <p>Žmonės ir darbo santykiai – darbo teisė, HR praktikos, pasitikėjimas, komunikacija ir pokyčių priėmimas.</p>
             <ul class="list">
               <li>be perteklinių metodikų</li>
               <li>be „vieno teisingo sprendimo“</li>
@@ -295,12 +268,8 @@
 
           <section>
             <h2>Kaip pradedame</h2>
-            <p>
-              Paprastai pradedame nuo trumpo pokalbio, be įsipareigojimų.
-            </p>
-            <p>
-              Jo metu pasitikriname situaciją, kontekstą ir ar galime būti naudingi. Jei matome prasmę tęsti, tolimesnis darbas aptariamas individualiai, pagal konkrečią situaciją.
-            </p>
+            <p>Paprastai pradedame nuo trumpo pokalbio, be įsipareigojimų.</p>
+            <p>Jo metu pasitikriname situaciją, kontekstą ir ar galime būti naudingi. Jei matome prasmę tęsti, tolimesnis darbas aptariamas individualiai, pagal konkrečią situaciją.</p>
           </section>
 
           <section>
@@ -312,45 +281,39 @@
             </ul>
           </section>
 
-          <footer>
-            aukss consulting
-          </footer>
+          <footer>aukss consulting</footer>
         </div>
 
-        <!-- ASIDE -->
         <div class="aside">
           <div class="card">
             <p class="big">Kontaktas</p>
-            <p>
-              Susisiekti galima per LinkedIn:
-              <br><br>
-              Donatas – <a href="#" target="_blank" rel="noopener">LinkedIn nuoroda</a><br>
-              Sigita – <a href="#" target="_blank" rel="noopener">LinkedIn nuoroda</a>
-            </p>
+            <p>Susisiekti galima per LinkedIn:</p>
 
             <div class="btnrow">
-              <a class="btn" href="#" target="_blank" rel="noopener">Parašyti Donatui</a>
-              <a class="btn" href="#" target="_blank" rel="noopener">Parašyti Sigitai</a>
+              <a class="btn" href="https://www.linkedin.com/in/donatas-auksorius-45664757" target="_blank" rel="noopener">
+                <svg class="liIcon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/>
+                </svg>
+                Donatas
+              </a>
+
+              <a class="btn" href="https://www.linkedin.com/in/sigita-auksore" target="_blank" rel="noopener">
+                <svg class="liIcon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/>
+                </svg>
+                Sigita
+              </a>
             </div>
           </div>
 
           <div class="card">
             <p class="big">Kaip rašyti</p>
-            <p>
-              Užtenka 2–3 sakinių: kas vyksta, koks kontekstas ir ko tikitės iš pokalbio.
-            </p>
+            <p>Užtenka 2–3 sakinių: kas vyksta, koks kontekstas ir ko tikitės iš pokalbio.</p>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
-
-  <!--
-    KAIP PAKEISTI NUORODAS:
-    1) Pakeisk pirmą "#" į Donato LinkedIn URL
-    2) Pakeisk antrą "#" į Sigitų LinkedIn URL
-    3) Mygtukuose "Parašyti ..." taip pat pakeisk # į atitinkamas nuorodas
-  -->
 </body>
 </html>
