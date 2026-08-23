@@ -87,6 +87,12 @@
       box-shadow: 0 0 0 5px var(--accent-soft);
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
     .navlinks {
       display: flex;
       align-items: center;
@@ -100,6 +106,32 @@
     }
 
     .navlinks a:hover { color: var(--text); }
+
+    .language {
+      display: inline-flex;
+      padding: 3px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .03);
+    }
+
+    .language button {
+      min-width: 38px;
+      padding: 6px 8px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--soft);
+      font: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .language button[aria-pressed="true"] {
+      background: var(--text);
+      color: var(--bg);
+    }
 
     .hero {
       max-width: 900px;
@@ -419,11 +451,18 @@
         Auks Consulting
       </a>
 
-      <div class="navlinks">
+      <div class="nav-right">
+        <div class="navlinks">
         <a href="#situacijos">Situacijos</a>
         <a href="#sesija">Aiškumo sesija</a>
         <a href="#susisiekti">Susisiekti</a>
         <a href="https://core.aukss.eu/">Aukss</a>
+        </div>
+
+        <div class="language" aria-label="Kalba">
+          <button id="lang-lt" type="button" aria-pressed="true">LT</button>
+          <button id="lang-en" type="button" aria-pressed="false">EN</button>
+        </div>
       </div>
     </nav>
 
@@ -564,5 +603,106 @@
       <span>Aiškumas prieš sprendimą.</span>
     </footer>
   </div>
+
+  <script>
+    const consultingTranslations = {
+      "Pagrindinė navigacija": "Primary navigation",
+      "Auks Consulting pradžia": "Auks Consulting home",
+      "Kalba": "Language",
+      "Situacijos": "Situations",
+      "Aiškumo sesija": "Clarity session",
+      "Susisiekti": "Contact",
+      "Išorinė perspektyva · Struktūruotas pokalbis": "External perspective · Structured conversation",
+      "Aiškumas prieš sprendimą.": "Clarity before the decision.",
+      "Kai situacija nebetelpa į vieną problemą, padedame pamatyti jos struktūrą, atskirti simptomus nuo priežasčių ir pasirinkti prasmingą kitą žingsnį.": "When a situation no longer fits into a single problem, we help reveal its structure, separate symptoms from causes and choose a meaningful next step.",
+      "Be iš anksto paruošto atsakymo. Be ilgalaikio įsipareigojimo.": "No predetermined answer. No long-term commitment.",
+      "Kada tai naudinga": "When it helps",
+      "Dvi skirtingos situacijų kryptys. Tas pats aiškumo poreikis.": "Two different types of situations. The same need for clarity.",
+      "01 · VEIKLA IR SISTEMA": "01 · OPERATIONS AND SYSTEM",
+      "Kai organizacija juda, bet progresą sunku suvaldyti.": "When the organization is moving, but progress is difficult to control.",
+      "Klausimas dažnai slypi ne viename procese ar žmoguje, o veikimo sistemoje ir ryšiuose tarp jos dalių.": "The issue often lies not in a single process or person, but in the operating system and the connections between its parts.",
+      "Procesai · atsakomybės · prioritetai · sprendimų vykdymas": "Processes · accountability · priorities · decision execution",
+      "02 · ŽMONĖS IR DARBO SANTYKIAI": "02 · PEOPLE AND EMPLOYMENT RELATIONS",
+      "Kai darbo santykių klausimui reikia teisiškai pagrįsto sprendimo.": "When an employment relations question requires a legally grounded decision.",
+      "Padedame suprasti, kaip darbo teisės normas pritaikyti organizacijos praktikoje.": "We help clarify how employment law should be applied in organizational practice.",
+      "Darbo teisė · normų taikymas · sprendimų pagrįstumas": "Employment law · practical application · grounded decisions",
+      "Vienas struktūruotas pokalbis, skirtas ne nuomonei, o situacijos logikai.": "One structured conversation focused not on opinions, but on the logic of the situation.",
+      "Kontekstas": "Context",
+      "Trumpai aprašote, kas vyksta, kas jau bandyta ir kokį sprendimą šiuo metu sunku priimti.": "You briefly describe what is happening, what has already been tried and which decision is currently difficult to make.",
+      "Išskaidymas": "Structuring",
+      "Pokalbio metu atskiriame faktus, prielaidas, simptomus, priežastis ir svarbiausias įtampas.": "During the conversation, we separate facts, assumptions, symptoms, causes and the most important tensions.",
+      "Kitas žingsnis": "Next step",
+      "Susidėliojate prioritetą: ką verta daryti dabar, ko dar nereikia spręsti ir ką būtina pasitikrinti.": "You establish the priority: what is worth doing now, what does not yet need to be solved and what must be verified.",
+      "Darbo ribos": "Scope",
+      "Vertę kuriame ten, kur reikia aiškumo – ne papildomos nuolatinės funkcijos.": "We create value where clarity is needed – not another permanent function.",
+      "Tinka, kai": "A good fit when",
+      "problema dar nėra tiksliai suformuluota;": "the problem has not yet been precisely defined;",
+      "reikia nepriklausomo požiūrio prieš priimant sprendimą;": "an independent view is needed before making a decision;",
+      "norite aiškesnių prioritetų ir konkretaus pirmojo žingsnio.": "you want clearer priorities and a concrete first step.",
+      "Neimame": "We do not take on",
+      "ilgalaikių, neapibrėžtos apimties projektų;": "long-term projects with undefined scope;",
+      "nuolatinio „išorinio skyriaus“ vaidmens;": "the role of a permanent external department;",
+      "situacijų, kuriose negalime suteikti realios vertės.": "situations where we cannot provide real value.",
+      "Pradėti nuo konteksto": "Start with context",
+      "Nebūtina iš anksto tiksliai žinoti, kokia yra problema.": "You do not need to know exactly what the problem is in advance.",
+      "Parašykite keliais sakiniais, kas vyksta ir kokį sprendimą šiuo metu sunku priimti. Atsakysime, ar ši situacija atitinka mūsų darbo pobūdį.": "Describe in a few sentences what is happening and which decision is currently difficult to make. We will respond whether the situation fits the way we work.",
+      "Galite pradėti taip: „Situacija, kurią bandome išspręsti…“": "You can start with: “The situation we are trying to resolve…”",
+      "Veikla, procesai, atsakomybės ir vykdymo sistema": "Operations, processes, accountability and execution system",
+      "Darbo teisės normų taikymas konkrečiose situacijose": "Application of employment law in specific situations",
+      "Aiškumas prieš sprendimą.": "Clarity before the decision."
+    };
+
+    const consultingMeta = {
+      lt: {
+        title: "Auks Consulting | Aiškumas prieš sprendimą",
+        description: "Struktūruotas pokalbis ir išorinė perspektyva, kai veiklos, procesų, žmonių ar darbo santykių situacijoje trūksta aiškumo.",
+        og: "Kai situacija nebetelpa į vieną problemą, padedame pamatyti jos struktūrą ir pasirinkti prasmingą kitą žingsnį."
+      },
+      en: {
+        title: "Auks Consulting | Clarity before the decision",
+        description: "A structured conversation and an external perspective when clarity is missing in operations, processes, people or employment relations.",
+        og: "When a situation no longer fits into a single problem, we help reveal its structure and choose a meaningful next step."
+      }
+    };
+
+    const consultingTextNodes = [];
+    const consultingWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    while (consultingWalker.nextNode()) {
+      const node = consultingWalker.currentNode;
+      const normalized = node.nodeValue.replace(/\s+/g, " ").trim();
+      if (consultingTranslations[normalized]) consultingTextNodes.push({ node, lt: normalized, en: consultingTranslations[normalized] });
+    }
+
+    const consultingAriaNodes = Array.from(document.querySelectorAll("[aria-label]")).map((element) => ({
+      element,
+      lt: element.getAttribute("aria-label"),
+      en: consultingTranslations[element.getAttribute("aria-label")] || element.getAttribute("aria-label")
+    }));
+
+    function setConsultingLanguage(language, save = true) {
+      const lang = language === "en" ? "en" : "lt";
+      document.documentElement.lang = lang;
+      consultingTextNodes.forEach(({ node, lt, en }) => { node.nodeValue = lang === "en" ? en : lt; });
+      consultingAriaNodes.forEach(({ element, lt, en }) => element.setAttribute("aria-label", lang === "en" ? en : lt));
+      document.title = consultingMeta[lang].title;
+      document.querySelector('meta[name="description"]').setAttribute("content", consultingMeta[lang].description);
+      document.querySelector('meta[property="og:title"]').setAttribute("content", consultingMeta[lang].title);
+      document.querySelector('meta[property="og:description"]').setAttribute("content", consultingMeta[lang].og);
+      document.getElementById("lang-lt").setAttribute("aria-pressed", String(lang === "lt"));
+      document.getElementById("lang-en").setAttribute("aria-pressed", String(lang === "en"));
+      if (save) {
+        try { localStorage.setItem("auks-language", lang); } catch (_) {}
+      }
+    }
+
+    document.getElementById("lang-lt").addEventListener("click", () => setConsultingLanguage("lt"));
+    document.getElementById("lang-en").addEventListener("click", () => setConsultingLanguage("en"));
+
+    let consultingLanguage = "lt";
+    try {
+      if (localStorage.getItem("auks-language") === "en") consultingLanguage = "en";
+    } catch (_) {}
+    setConsultingLanguage(consultingLanguage, false);
+  </script>
 </body>
 </html>
