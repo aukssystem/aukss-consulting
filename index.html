@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Auksor Consulting | Aiškumas prieš sprendimą</title>
-  <meta name="description" content="Struktūruotas pokalbis ir išorinė perspektyva, kai veiklos, procesų, žmonių ar darbo santykių situacijoje trūksta aiškumo." />
+  <title>Auksor Consulting | Organizacijos veikimo sistema</title>
+  <meta name="description" content="Padedame organizacijoms nustatyti, kas riboja rezultatą, parinkti tikslinę vadybinę ar procesinę intervenciją ir užtikrinti jos vykdymą." />
   <link rel="canonical" href="https://consulting.aukss.eu/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="lt_LT" />
-  <meta property="og:title" content="Auksor Consulting | Aiškumas prieš sprendimą" />
-  <meta property="og:description" content="Kai situacija nebetelpa į vieną problemą, padedame pamatyti jos struktūrą ir pasirinkti prasmingą kitą žingsnį." />
+  <meta property="og:title" content="Auksor Consulting | Organizacijos veikimo sistema" />
+  <meta property="og:description" content="Nustatome, kas iš tikrųjų riboja organizacijos rezultatą, ir ką pakeitus pajudėtų visa sistema." />
   <meta property="og:url" content="https://consulting.aukss.eu/" />
   <meta name="theme-color" content="#0f1111" />
 
@@ -164,6 +164,13 @@
       font-size: clamp(18px, 2.2vw, 21px);
     }
 
+    .principle {
+      margin: 22px 0 0;
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 500;
+    }
+
     section {
       padding: 72px 0;
       border-top: 1px solid var(--line);
@@ -287,6 +294,20 @@
     .session-step p {
       margin: 0;
       color: var(--muted);
+    }
+
+    .execution-note {
+      margin: 38px 0 0;
+      padding: 19px 22px;
+      border-left: 2px solid var(--accent);
+      color: var(--muted);
+    }
+
+    .execution-note strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--text);
+      font-weight: 600;
     }
 
     .scope {
@@ -448,7 +469,7 @@
       <div class="nav-right">
         <div class="navlinks">
         <a href="#situacijos">Situacijos</a>
-        <a href="#sesija">Aiškumo sesija</a>
+        <a href="#sesija">Diagnostika</a>
         <a href="#susisiekti">Susisiekti</a>
         <a href="https://core.aukss.eu/">Aukss</a>
         </div>
@@ -462,30 +483,32 @@
 
     <main>
       <header class="hero">
-        <p class="eyebrow">Išorinė perspektyva</p>
-        <h1>Aiškumas prieš sprendimą.</h1>
+        <p class="eyebrow">Organizacijos veikimo sistema</p>
+        <h1>Kai organizacijos rezultatas stringa, problema retai būna viena.</h1>
         <p class="lead">
-          Kai situacija nebetelpa į vieną problemą, padedame pamatyti jos struktūrą,
-          atskirti simptomus nuo priežasčių ir pasirinkti prasmingą kitą žingsnį.
+          Padedame nustatyti, kas iš tikrųjų riboja rezultatą, ir pasirinkti vadybinę
+          ar procesinę intervenciją, kuri pajudina sistemą.
         </p>
+        <p class="principle">Neoptimizuojame visko. Ieškome, ką pakeitus pajudėtų visa sistema.</p>
       </header>
 
       <section id="situacijos" aria-labelledby="situacijos-title">
         <div class="section-head">
-          <p class="label">Kada tai naudinga</p>
-          <h2 id="situacijos-title">Dvi skirtingos situacijų kryptys. Tas pats aiškumo poreikis.</h2>
+          <p class="label">Dvi kompetencijų kryptys</p>
+          <h2 id="situacijos-title">Organizacijos veikimas ir darbo santykiai.</h2>
         </div>
 
         <div class="paths">
           <article class="path">
             <span class="path-number">01 · VEIKLA IR SISTEMA</span>
-            <h3>Kai organizacija juda, bet progresą sunku suvaldyti.</h3>
+            <h3>Kai rezultatas stringa, nors žmonės dirba ir iniciatyvų netrūksta.</h3>
             <p>
-              Klausimas dažnai slypi ne viename procese ar žmoguje, o veikimo sistemoje
-              ir ryšiuose tarp jos dalių.
+              Vertiname, kaip juda darbas, priimami sprendimai, paskirstoma atsakomybė
+              ir užtikrinamas vykdymas. Ieškome ne visų problemų, o tos, kuri labiausiai
+              riboja visą sistemą.
             </p>
             <p class="path-focus">
-              Procesai · atsakomybės · prioritetai · sprendimų vykdymas
+              Procesai · vadybos praktikos · atsakomybės · sistemos apribojimai · vykdymas
             </p>
           </article>
 
@@ -493,8 +516,8 @@
             <span class="path-number">02 · ŽMONĖS IR DARBO SANTYKIAI</span>
             <h3>Kai darbo santykių klausimui reikia teisiškai pagrįsto sprendimo.</h3>
             <p>
-              Padedame suprasti, kaip darbo teisės normas
-              pritaikyti organizacijos praktikoje.
+              Padedame nustatyti, kaip darbo teisės normas
+              taikyti konkrečioje organizacijos situacijoje.
             </p>
             <p class="path-focus">
               Darbo teisė · normų taikymas · sprendimų pagrįstumas
@@ -505,49 +528,57 @@
 
       <section id="sesija" aria-labelledby="sesija-title">
         <div class="section-head">
-          <p class="label">Aiškumo sesija</p>
+          <p class="label">Veikimo sistemos diagnostika</p>
           <div>
-            <h2 id="sesija-title">Vienas struktūruotas pokalbis, skirtas ne nuomonei, o situacijos logikai.</h2>
+            <h2 id="sesija-title">Nuo stringančio rezultato iki tikslinės intervencijos.</h2>
           </div>
         </div>
 
         <div class="session">
           <div class="session-step">
             <h3>Kontekstas</h3>
-            <p>Trumpai aprašote, kas vyksta, kas jau bandyta ir kokį sprendimą šiuo metu sunku priimti.</p>
+            <p>Nustatome, koks rezultatas stringa, kas jau bandyta ir kur organizacija jaučia didžiausią įtampą.</p>
           </div>
           <div class="session-step">
-            <h3>Išskaidymas</h3>
-            <p>Pokalbio metu atskiriame faktus, prielaidas, simptomus, priežastis ir svarbiausias įtampas.</p>
+            <h3>Apribojimas</h3>
+            <p>Atskiriame simptomus nuo priežasčių ir ieškome, kas realiai riboja rezultatą: procesas, vadybos praktika, sprendimų struktūra, atsakomybės ar kitas sistemos elementas.</p>
           </div>
           <div class="session-step">
-            <h3>Kitas žingsnis</h3>
-            <p>Susidėliojate prioritetą: ką verta daryti dabar, ko dar nereikia spręsti ir ką būtina pasitikrinti.</p>
+            <h3>Intervencija</h3>
+            <p>Nustatome, kur pakeitimas duotų didžiausią poveikį, ką verta keisti dabar ir ko kol kas neliesti.</p>
           </div>
         </div>
+
+        <p class="execution-note">
+          Tikslas nėra tik nustatyti, kas neveikia. Tikslas – sukurti veikimo būdą,
+          kuris prigyja kasdienėje vadyboje.
+          <strong>Diagnozė → intervencija → vykdymas.</strong>
+        </p>
       </section>
 
       <section aria-labelledby="ribos-title">
         <div class="section-head">
-          <p class="label">Darbo ribos</p>
-          <h2 id="ribos-title">Vertę kuriame ten, kur reikia aiškumo – ne papildomos nuolatinės funkcijos.</h2>
+          <p class="label">Darbo principas</p>
+          <h2 id="ribos-title">Diagnozė turi virsti veikiančiu vadybos sprendimu.</h2>
         </div>
 
         <div class="scope">
           <article class="scope-card positive">
             <h3>Tinka, kai</h3>
             <ul>
-              <li>problema dar nėra tiksliai suformuluota;</li>
-              <li>reikia nepriklausomo požiūrio prieš priimant sprendimą;</li>
-              <li>norite aiškesnių prioritetų ir konkretaus pirmojo žingsnio.</li>
+              <li>rezultatas stringa, tačiau priežastis nėra akivaizdi;</li>
+              <li>iniciatyvų daug, bet vykdymas neduoda laukiamo poveikio;</li>
+              <li>reikia nustatyti, ką keisti pirmiausia;</li>
+              <li>svarbu ne tik rekomendacija, bet ir jos pritaikymas veikloje.</li>
             </ul>
           </article>
 
           <article class="scope-card">
-            <h3>Neimame</h3>
+            <h3>Nesiimame</h3>
             <ul>
-              <li>ilgalaikių, neapibrėžtos apimties projektų;</li>
-              <li>nuolatinio „išorinio skyriaus“ vaidmens;</li>
+              <li>optimizuoti visos organizacijos vienu metu;</li>
+              <li>diegti metodo vien dėl paties metodo;</li>
+              <li>rengti rekomendacijų, kurių neįmanoma įgyvendinti;</li>
               <li>situacijų, kuriose negalime suteikti realios vertės.</li>
             </ul>
           </article>
@@ -556,14 +587,14 @@
 
       <aside id="susisiekti" class="contact" aria-labelledby="contact-title">
         <div>
-          <p class="label">Pradėti nuo konteksto</p>
-          <h2 id="contact-title">Nebūtina iš anksto tiksliai žinoti, kokia yra problema.</h2>
+          <p class="label">Pradėti nuo rezultato</p>
+          <h2 id="contact-title">Nebūtina iš anksto žinoti, kur slypi problema.</h2>
           <p class="contact-copy">
-            Parašykite keliais sakiniais, kas vyksta ir kokį sprendimą šiuo metu sunku priimti.
-            Atsakysime, ar ši situacija atitinka mūsų darbo pobūdį.
+            Trumpai aprašykite, koks rezultatas stringa, kas jau bandyta ir kodėl dabartiniai
+            sprendimai neduoda laukiamo poveikio. Atsakysime, ar galime būti naudingi.
           </p>
           <p class="prompt">
-            Galite pradėti taip: „Situacija, kurią bandome išspręsti…“
+            Galite pradėti taip: „Rezultatas, kurio šiuo metu nepavyksta pasiekti…“
           </p>
         </div>
 
@@ -575,7 +606,7 @@
               </svg>
               Donatas Auksorius →
             </span>
-            <span class="person-topic">Veikla, procesai, atsakomybės ir vykdymo sistema</span>
+            <span class="person-topic">Veikimo sistemos diagnostika · apribojimai · vykdymas</span>
           </a>
 
           <a class="person" href="https://www.linkedin.com/in/sigita-auksor%C4%97" target="_blank" rel="noopener noreferrer">
@@ -593,7 +624,7 @@
 
     <footer>
       <span>© 2026 Auksor Consulting</span>
-      <span>Aiškumas prieš sprendimą.</span>
+      <span>Rasti apribojimą → pakeisti sistemą → užtikrinti vykdymą.</span>
     </footer>
   </div>
 
@@ -603,57 +634,62 @@
       "Auksor Consulting pradžia": "Auksor Consulting home",
       "Kalba": "Language",
       "Situacijos": "Situations",
-      "Aiškumo sesija": "Clarity session",
+      "Diagnostika": "Diagnostics",
       "Susisiekti": "Contact",
-      "Išorinė perspektyva": "External perspective",
-      "Aiškumas prieš sprendimą.": "Clarity before the decision.",
-      "Kai situacija nebetelpa į vieną problemą, padedame pamatyti jos struktūrą, atskirti simptomus nuo priežasčių ir pasirinkti prasmingą kitą žingsnį.": "When a situation no longer fits into a single problem, we help reveal its structure, separate symptoms from causes and choose a meaningful next step.",
-      "Kada tai naudinga": "When it helps",
-      "Dvi skirtingos situacijų kryptys. Tas pats aiškumo poreikis.": "Two different types of situations. The same need for clarity.",
+      "Organizacijos veikimo sistema": "Organizational operating system",
+      "Kai organizacijos rezultatas stringa, problema retai būna viena.": "When organizational performance stalls, the problem is rarely isolated.",
+      "Padedame nustatyti, kas iš tikrųjų riboja rezultatą, ir pasirinkti vadybinę ar procesinę intervenciją, kuri pajudina sistemą.": "We identify what truly constrains performance and choose the managerial or process intervention that will move the system.",
+      "Neoptimizuojame visko. Ieškome, ką pakeitus pajudėtų visa sistema.": "We do not optimize everything. We identify the change that will move the whole system.",
+      "Dvi kompetencijų kryptys": "Two areas of expertise",
+      "Organizacijos veikimas ir darbo santykiai.": "Organizational operations and employment relations.",
       "01 · VEIKLA IR SISTEMA": "01 · OPERATIONS AND SYSTEM",
-      "Kai organizacija juda, bet progresą sunku suvaldyti.": "When the organization is moving, but progress is difficult to control.",
-      "Klausimas dažnai slypi ne viename procese ar žmoguje, o veikimo sistemoje ir ryšiuose tarp jos dalių.": "The issue often lies not in a single process or person, but in the operating system and the connections between its parts.",
-      "Procesai · atsakomybės · prioritetai · sprendimų vykdymas": "Processes · accountability · priorities · decision execution",
+      "Kai rezultatas stringa, nors žmonės dirba ir iniciatyvų netrūksta.": "When performance stalls despite active people and no shortage of initiatives.",
+      "Vertiname, kaip juda darbas, priimami sprendimai, paskirstoma atsakomybė ir užtikrinamas vykdymas. Ieškome ne visų problemų, o tos, kuri labiausiai riboja visą sistemą.": "We assess how work flows, decisions are made, accountability is assigned and execution is sustained. We do not look for every problem, but for the one that constrains the whole system most.",
+      "Procesai · vadybos praktikos · atsakomybės · sistemos apribojimai · vykdymas": "Processes · management practices · accountability · system constraints · execution",
       "02 · ŽMONĖS IR DARBO SANTYKIAI": "02 · PEOPLE AND EMPLOYMENT RELATIONS",
       "Kai darbo santykių klausimui reikia teisiškai pagrįsto sprendimo.": "When an employment relations question requires a legally grounded decision.",
-      "Padedame suprasti, kaip darbo teisės normas pritaikyti organizacijos praktikoje.": "We help clarify how employment law should be applied in organizational practice.",
+      "Padedame nustatyti, kaip darbo teisės normas taikyti konkrečioje organizacijos situacijoje.": "We determine how employment law should be applied in a specific organizational situation.",
       "Darbo teisė · normų taikymas · sprendimų pagrįstumas": "Employment law · practical application · grounded decisions",
-      "Vienas struktūruotas pokalbis, skirtas ne nuomonei, o situacijos logikai.": "One structured conversation focused not on opinions, but on the logic of the situation.",
+      "Nuo stringančio rezultato iki tikslinės intervencijos.": "From stalled performance to a targeted intervention.",
       "Kontekstas": "Context",
-      "Trumpai aprašote, kas vyksta, kas jau bandyta ir kokį sprendimą šiuo metu sunku priimti.": "You briefly describe what is happening, what has already been tried and which decision is currently difficult to make.",
-      "Išskaidymas": "Structuring",
-      "Pokalbio metu atskiriame faktus, prielaidas, simptomus, priežastis ir svarbiausias įtampas.": "During the conversation, we separate facts, assumptions, symptoms, causes and the most important tensions.",
-      "Kitas žingsnis": "Next step",
-      "Susidėliojate prioritetą: ką verta daryti dabar, ko dar nereikia spręsti ir ką būtina pasitikrinti.": "You establish the priority: what is worth doing now, what does not yet need to be solved and what must be verified.",
-      "Darbo ribos": "Scope",
-      "Vertę kuriame ten, kur reikia aiškumo – ne papildomos nuolatinės funkcijos.": "We create value where clarity is needed – not another permanent function.",
+      "Nustatome, koks rezultatas stringa, kas jau bandyta ir kur organizacija jaučia didžiausią įtampą.": "We establish which result is stalled, what has already been tried and where the organization feels the greatest pressure.",
+      "Apribojimas": "Constraint",
+      "Atskiriame simptomus nuo priežasčių ir ieškome, kas realiai riboja rezultatą: procesas, vadybos praktika, sprendimų struktūra, atsakomybės ar kitas sistemos elementas.": "We separate symptoms from causes and identify what actually constrains performance: a process, management practice, decision structure, accountability or another system element.",
+      "Intervencija": "Intervention",
+      "Nustatome, kur pakeitimas duotų didžiausią poveikį, ką verta keisti dabar ir ko kol kas neliesti.": "We determine where a change would have the greatest impact, what to change now and what to leave untouched for the time being.",
+      "Tikslas nėra tik nustatyti, kas neveikia. Tikslas – sukurti veikimo būdą, kuris prigyja kasdienėje vadyboje.": "The goal is not only to identify what is not working. The goal is to build a way of operating that becomes part of everyday management.",
+      "Diagnozė → intervencija → vykdymas.": "Diagnosis → intervention → execution.",
+      "Darbo principas": "Working principle",
+      "Diagnozė turi virsti veikiančiu vadybos sprendimu.": "A diagnosis must become a management solution that works.",
       "Tinka, kai": "A good fit when",
-      "problema dar nėra tiksliai suformuluota;": "the problem has not yet been precisely defined;",
-      "reikia nepriklausomo požiūrio prieš priimant sprendimą;": "an independent view is needed before making a decision;",
-      "norite aiškesnių prioritetų ir konkretaus pirmojo žingsnio.": "you want clearer priorities and a concrete first step.",
-      "Neimame": "We do not take on",
-      "ilgalaikių, neapibrėžtos apimties projektų;": "long-term projects with undefined scope;",
-      "nuolatinio „išorinio skyriaus“ vaidmens;": "the role of a permanent external department;",
+      "rezultatas stringa, tačiau priežastis nėra akivaizdi;": "performance is stalled, but the cause is not obvious;",
+      "iniciatyvų daug, bet vykdymas neduoda laukiamo poveikio;": "there are many initiatives, but execution is not producing the expected impact;",
+      "reikia nustatyti, ką keisti pirmiausia;": "you need to determine what to change first;",
+      "svarbu ne tik rekomendacija, bet ir jos pritaikymas veikloje.": "you need more than a recommendation — it must be applied in operations.",
+      "Nesiimame": "We do not take on",
+      "optimizuoti visos organizacijos vienu metu;": "optimizing the entire organization at once;",
+      "diegti metodo vien dėl paties metodo;": "implementing a method for its own sake;",
+      "rengti rekomendacijų, kurių neįmanoma įgyvendinti;": "producing recommendations that cannot be implemented;",
       "situacijų, kuriose negalime suteikti realios vertės.": "situations where we cannot provide real value.",
-      "Pradėti nuo konteksto": "Start with context",
-      "Nebūtina iš anksto tiksliai žinoti, kokia yra problema.": "You do not need to know exactly what the problem is in advance.",
-      "Parašykite keliais sakiniais, kas vyksta ir kokį sprendimą šiuo metu sunku priimti. Atsakysime, ar ši situacija atitinka mūsų darbo pobūdį.": "Describe in a few sentences what is happening and which decision is currently difficult to make. We will respond whether the situation fits the way we work.",
-      "Galite pradėti taip: „Situacija, kurią bandome išspręsti…“": "You can start with: “The situation we are trying to resolve…”",
-      "Veikla, procesai, atsakomybės ir vykdymo sistema": "Operations, processes, accountability and execution system",
+      "Pradėti nuo rezultato": "Start with the result",
+      "Nebūtina iš anksto žinoti, kur slypi problema.": "You do not need to know in advance where the problem lies.",
+      "Trumpai aprašykite, koks rezultatas stringa, kas jau bandyta ir kodėl dabartiniai sprendimai neduoda laukiamo poveikio. Atsakysime, ar galime būti naudingi.": "Briefly describe which result is stalled, what has already been tried and why current solutions are not producing the expected impact. We will tell you whether we can help.",
+      "Galite pradėti taip: „Rezultatas, kurio šiuo metu nepavyksta pasiekti…“": "You can start with: “The result we are currently unable to achieve…”",
+      "Veikimo sistemos diagnostika · apribojimai · vykdymas": "Operating-system diagnostics · constraints · execution",
       "Darbo teisės normų taikymas konkrečiose situacijose": "Application of employment law in specific situations",
-      "Aiškumas prieš sprendimą.": "Clarity before the decision."
+      "Rasti apribojimą → pakeisti sistemą → užtikrinti vykdymą.": "Find the constraint → fix the system → make execution stick."
     };
 
     const consultingMeta = {
       lt: {
-        title: "Auksor Consulting | Aiškumas prieš sprendimą",
-        description: "Struktūruotas pokalbis ir išorinė perspektyva, kai veiklos, procesų, žmonių ar darbo santykių situacijoje trūksta aiškumo.",
-        og: "Kai situacija nebetelpa į vieną problemą, padedame pamatyti jos struktūrą ir pasirinkti prasmingą kitą žingsnį."
+        title: "Auksor Consulting | Organizacijos veikimo sistema",
+        description: "Padedame organizacijoms nustatyti, kas riboja rezultatą, parinkti tikslinę vadybinę ar procesinę intervenciją ir užtikrinti jos vykdymą.",
+        og: "Nustatome, kas iš tikrųjų riboja organizacijos rezultatą, ir ką pakeitus pajudėtų visa sistema."
       },
       en: {
-        title: "Auksor Consulting | Clarity before the decision",
-        description: "A structured conversation and an external perspective when clarity is missing in operations, processes, people or employment relations.",
-        og: "When a situation no longer fits into a single problem, we help reveal its structure and choose a meaningful next step."
+        title: "Auksor Consulting | Organizational operating system",
+        description: "We help organizations identify what constrains performance, select a targeted managerial or process intervention and make execution stick.",
+        og: "We identify what truly constrains organizational performance and which change will move the whole system."
       }
     };
 
