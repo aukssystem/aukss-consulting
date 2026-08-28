@@ -334,10 +334,10 @@
     .contact {
       display: grid;
       grid-template-columns: 1.05fr .95fr;
-      gap: 36px;
-      align-items: start;
-      margin: 72px 0;
-      padding: 38px;
+      gap: 28px;
+      align-items: center;
+      margin: 58px 0;
+      padding: 30px;
       border: 1px solid var(--line);
       border-radius: 22px;
       background:
@@ -345,25 +345,9 @@
         var(--paper);
     }
 
-    .contact h2 {
-      margin: 0;
-      max-width: 600px;
-      font-size: clamp(29px, 4vw, 43px);
-      line-height: 1.13;
-      letter-spacing: -.03em;
-    }
-
     .contact-copy {
-      margin: 17px 0 0;
+      margin: 0;
       color: var(--muted);
-    }
-
-    .prompt {
-      margin: 23px 0 0;
-      padding-left: 17px;
-      border-left: 2px solid var(--accent);
-      color: var(--text);
-      font-size: 14px;
     }
 
     .contacts {
@@ -553,10 +537,9 @@
         </div>
       </section>
 
-      <aside id="susisiekti" class="contact" aria-labelledby="contact-title">
+      <aside id="susisiekti" class="contact">
         <div>
           <p class="label">Pradėti nuo rezultato</p>
-          <h2 id="contact-title">Nebūtina iš anksto žinoti, kur slypi problema.</h2>
           <p class="contact-copy">
             Trumpai aprašykite, koks rezultatas stringa, kas jau bandyta ir kodėl dabartiniai
             sprendimai neduoda laukiamo poveikio. Atsakysime, ar galime būti naudingi.
@@ -589,7 +572,7 @@
 
     <footer>
       <span>© 2026 Auksor Consulting</span>
-      <span>Rasti apribojimą → pakeisti sistemą → užtikrinti vykdymą.</span>
+      <span>Rasti apribojimą | Pakeisti sistemą | Užtikrinti vykdymą.</span>
     </footer>
   </div>
 
@@ -628,11 +611,10 @@
       "rengti rekomendacijų, kurių neįmanoma įgyvendinti;": "producing recommendations that cannot be implemented;",
       "situacijų, kuriose negalime suteikti realios vertės.": "situations where we cannot provide real value.",
       "Pradėti nuo rezultato": "Start with the result",
-      "Nebūtina iš anksto žinoti, kur slypi problema.": "You do not need to know in advance where the problem lies.",
       "Trumpai aprašykite, koks rezultatas stringa, kas jau bandyta ir kodėl dabartiniai sprendimai neduoda laukiamo poveikio. Atsakysime, ar galime būti naudingi.": "Briefly describe which result is stalled, what has already been tried and why current solutions are not producing the expected impact. We will tell you whether we can help.",
       "Veikimo sistemos diagnostika · apribojimai · vykdymas": "Operating-system diagnostics · constraints · execution",
       "Darbo teisės normų taikymas konkrečiose situacijose": "Application of employment law in specific situations",
-      "Rasti apribojimą → pakeisti sistemą → užtikrinti vykdymą.": "Find the constraint → fix the system → make execution stick."
+      "Rasti apribojimą | Pakeisti sistemą | Užtikrinti vykdymą.": "Find the constraint | Fix the system | Make execution stick."
     };
 
     const consultingMeta = {
